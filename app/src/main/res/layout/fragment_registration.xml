@@ -1,0 +1,85 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.gihan.mashawyery.fragment.RegistrationFragment">
+
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:orientation="vertical">
+
+
+        <EditText
+            android:id="@+id/et_regester_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="8dp"
+            android:layout_weight="1"
+            android:hint="@string/register_name"
+            android:inputType="textPersonName"
+            android:padding="8dp"
+
+            />
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/et_regester_email"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:hint="@string/regester_email"
+        android:inputType="textEmailAddress"
+        android:padding="8dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <EditText
+            android:id="@+id/et_regester_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:hint="Phone number  "
+            android:inputType="phone"
+
+            android:padding="8dp"
+
+            />
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/et_regester_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:padding="8dp"
+
+        />
+
+    <Button
+        android:id="@+id/btn_create_account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@color/colorPrimaryDark"
+        android:padding="8dp"
+        android:text="@string/regester_create_account"
+        android:textColor="@android:color/white" />
+
+</LinearLayout>

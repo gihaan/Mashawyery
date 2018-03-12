@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Mashawyery</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="first_fragment_title_uper">Mashawyery </string>
+    <string name="sign_in">Sign In </string>
+    <string name="regester">Create Account </string>
+    <string name="tool_bar_login">Login</string>
+    <string name="tool_bar_regeser">create new account </string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="register_name">Name</string>
+    <string name="regester_email">Eamil </string>
+    <string name="tool_bar_verification">Verifing phone number</string>
+    <string name="regester_create_account">Create account</string>
+    <string name="login_btn">Login</string>
+    <string name="password">Password</string>
+    <string name="title_activity_main_map">Map</string>
+</resources>

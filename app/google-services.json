@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "314209701628",
+    "firebase_url": "https://mashawyery.firebaseio.com",
+    "project_id": "mashawyery",
+    "storage_bucket": "mashawyery.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:314209701628:android:90c59eee1e5dcc0d",
+        "android_client_info": {
+          "package_name": "com.example.gihan.mashawyery"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "314209701628-mkcjrc0sgn6rsdpggod9qh7lp3jv6b3d.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.gihan.mashawyery",
+            "certificate_hash": "224c1ba3fd653990bc83873954db7abaffdedb7a"
+          }
+        },
+        {
+          "client_id": "314209701628-3ttf6moirm3osual9su2dsq6untd9go4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjxCKhOvGIZ3oQhA8Ldu95CStMH-fx3b4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "314209701628-3ttf6moirm3osual9su2dsq6untd9go4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,58 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/vrerification_activity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:orientation="vertical"
+    tools:context="com.example.gihan.mashawyery.fragment.VerificationPhoneNumberFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="110dp"
+        android:gravity="center"
+
+        android:padding="10dp"
+        android:text="سوف يتم ارسال كود ف رساله قصيره  علي هذا الرقم من فضلك قم بادخال الكود  "
+        android:textColor="@android:color/white"
+        android:textSize="20dp"
+
+        />
+
+    <EditText
+        android:id="@+id/verification_et_pin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:hint="PIN"
+        android:padding="10dp"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/verification_btn_reset_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="اعد ارسال الكود " />
+
+    <ImageButton
+        android:id="@+id/verification_btn_go"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorPrimaryDark"
+        android:padding="20dp"
+        android:src="@drawable/gi" />
+
+</LinearLayout>

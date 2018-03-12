@@ -1,0 +1,59 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    tools:context="com.example.gihan.mashawyery.fragment.First">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:text="@string/first_fragment_title_uper"
+        android:padding="10dp"
+        android:textColor="@android:color/white"
+        android:textSize="36sp" />
+
+
+    <LinearLayout
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+
+        >
+
+        <Button
+            android:id="@+id/btn_first_fragment_sign"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="6dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_sing_in_background"
+            android:text="@string/sign_in"
+            android:textColor="@android:color/white"
+            tools:ignore="Suspicious0dp"
+            android:layout_marginEnd="6dp" />
+
+        <Button
+            android:id="@+id/btn_first_fragment_regester"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_regester_in_background"
+            android:text="@string/regester"
+            android:textColor="@color/btnregester"
+            tools:ignore="Suspicious0dp"
+            android:layout_marginStart="6dp" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

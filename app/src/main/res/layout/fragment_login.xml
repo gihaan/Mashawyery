@@ -1,0 +1,54 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:gravity="center"
+    tools:context="com.example.gihan.mashawyery.fragment.LoginFragment">
+
+
+
+    <EditText
+        android:id="@+id/etlogin_username"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:padding="8dp"
+        android:inputType="textEmailAddress"
+        android:hint="@string/regester_email"
+
+
+
+        />
+
+    <EditText
+        android:id="@+id/et_login_password"
+
+        android:inputType="textPassword"
+        android:hint="@string/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:padding="8dp"
+
+        />
+
+
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@color/colorPrimaryDark"
+        android:padding="8dp"
+        android:text="@string/login_btn"
+        android:textColor="@android:color/white" />
+
+
+        />
+</LinearLayout>

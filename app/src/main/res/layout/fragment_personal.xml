@@ -1,0 +1,164 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.gihan.mashawyery.fragment.PersonalFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+
+        >
+
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_margin="15dp"
+                android:src="@drawable/man"
+                android:id="@+id/personal_fragment_image"
+
+
+                />
+
+            <ImageView
+                android:id="@+id/personal_fragment_changr_photo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="65dp"
+                android:src="@drawable/pencil" />
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="15dp"
+            android:gravity="right"
+            android:hint="الاسم"
+            android:padding="10dp"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/personal_fragment_tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="15dp"
+            android:gravity="right"
+            android:padding="5dp"
+            android:text="محمد محمود "
+            android:textColor="@android:color/black"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            android:gravity="right"
+            android:hint="التليفون "
+            android:padding="10dp"
+            android:textSize="15dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:padding="5dp"
+                android:src="@drawable/egypt" />
+
+            <TextView
+                android:id="@+id/personal_fragment_tv_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginLeft="30dp"
+                android:gravity="right"
+                android:padding="10dp"
+                android:text="+20 01274800796"
+                android:textColor="@android:color/black"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/personal_fragment_tv_verified"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textSize="15dp" />
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            android:gravity="right"
+            android:hint="الايميل "
+            android:padding="10dp"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/personal_fragment_tv_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="15dp"
+            android:gravity="right"
+            android:padding="10dp"
+            android:text="gemy 6987@gmail.com"
+            android:textColor="@android:color/black"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            android:gravity="right"
+            android:hint="كلمه المرور "
+            android:padding="10dp"
+            android:textSize="15dp" />
+
+        <TextView
+            android:inputType="textPassword"
+            android:id="@+id/personal_fragment_tv_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="15dp"
+            android:gravity="right"
+            android:textColor="@android:color/black"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+</FrameLayout>
