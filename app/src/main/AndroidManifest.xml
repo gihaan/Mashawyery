@@ -33,7 +33,7 @@
 
 
         <activity
-            android:name=".ui.MainActivity">
+            android:name=".ui.First">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -43,7 +43,7 @@
 
           <!-- optional (needed if default theme has no action bar) -->
 
-        <activity android:name=".ui.First" />
+        <activity android:name=".ui.MainActivity" />
         <activity android:name=".ui.Regestration" />
         <activity android:name=".ui.Login" />
         <activity android:name=".ui.PaymentActivity" />

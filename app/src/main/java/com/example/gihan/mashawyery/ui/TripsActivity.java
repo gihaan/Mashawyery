@@ -13,7 +13,6 @@ public class TripsActivity extends AppCompatActivity {
 
 
     private ViewPager mViewPager;
-
     SectionBageAdapter mSectionBageAdapter;
     private TabLayout mTablLayout;
     @Override
