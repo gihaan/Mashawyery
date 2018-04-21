@@ -3,6 +3,8 @@ package com.example.gihan.mashawyery.ui;
 import android.content.Intent;
 import android.os.Bundle;
 ;
+import android.support.design.widget.TabLayout;
+import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -40,7 +42,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     FirebaseAuth mAuth;
     private DatabaseReference mRootRef;
 
-
+    ViewPager mViewPager;
+    SectionBageadapterMain mSectionBageAdapter;
+    TabLayout mTablLayout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,7 +53,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         toolbar.setTitle("مشاويري ");
         setSupportActionBar(toolbar);
 
-        Button addTrip = (Button) findViewById(R.id.btn_add_trip);
+      //  Button addTrip = (Button) findViewById(R.id.btn_add_trip);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -75,6 +79,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         final TextView email = (TextView) v.findViewById(R.id.main_tv_email);
         final TextView name = (TextView) v.findViewById(R.id.main_tv_name);
         final CircleImageView image = (CircleImageView) v.findViewById(R.id.main_image_view);
+
 
         currentUser = FirebaseAuth.getInstance().getCurrentUser();
         String userId = currentUser.getUid();
@@ -108,6 +113,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         navigationView.setNavigationItemSelectedListener(this);
         //-------------------------------------------------------------------
+
+        //-------------View Pager ------
+        mViewPager=(ViewPager)findViewById(R.id.main_tab_pager_main);
+        mSectionBageAdapter= new SectionBageadapterMain(getSupportFragmentManager());
+        mViewPager.setAdapter(mSectionBageAdapter);
+
+        mTablLayout=(TabLayout)findViewById(R.id.main_tabs_main);
+        mTablLayout.setupWithViewPager(mViewPager);
+
+        //-----------------notification -----------
 
     }
 
