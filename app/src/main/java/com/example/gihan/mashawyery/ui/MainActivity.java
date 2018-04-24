@@ -62,6 +62,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         toggle.syncState();
 
 
+
+        //-------------View Pager ------
+        mViewPager=findViewById(R.id.main_tab_pager_main);
+        mTablLayout=findViewById(R.id.main_tabs_main);
+
+        mSectionBageAdapter= new SectionBageadapterMain(getSupportFragmentManager(),getApplicationContext());
+        mViewPager.setAdapter(mSectionBageAdapter);
+        mTablLayout.setupWithViewPager(mViewPager);
+
 //        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
 //        fab.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -113,14 +122,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         navigationView.setNavigationItemSelectedListener(this);
         //-------------------------------------------------------------------
-
-        //-------------View Pager ------
-        mViewPager=(ViewPager)findViewById(R.id.main_tab_pager_main);
-        mSectionBageAdapter= new SectionBageadapterMain(getSupportFragmentManager());
-        mViewPager.setAdapter(mSectionBageAdapter);
-
-        mTablLayout=(TabLayout)findViewById(R.id.main_tabs_main);
-        mTablLayout.setupWithViewPager(mViewPager);
 
         //-----------------notification -----------
 
