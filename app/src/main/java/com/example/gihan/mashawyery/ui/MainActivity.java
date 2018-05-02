@@ -2,19 +2,17 @@ package com.example.gihan.mashawyery.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
-;
-import android.support.design.widget.TabLayout;
-import android.support.v4.view.ViewPager;
-import android.view.View;
 import android.support.design.widget.NavigationView;
+import android.support.design.widget.TabLayout;
 import android.support.v4.view.GravityCompat;
+import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Button;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -33,6 +31,8 @@ import java.util.Map;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
+;
+
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
 
@@ -45,6 +45,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     ViewPager mViewPager;
     SectionBageadapterMain mSectionBageAdapter;
     TabLayout mTablLayout;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,7 +54,20 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         toolbar.setTitle("مشاويري ");
         setSupportActionBar(toolbar);
 
-      //  Button addTrip = (Button) findViewById(R.id.btn_add_trip);
+
+        //check current user
+        try {
+
+            FirebaseUser User = FirebaseAuth.getInstance().getCurrentUser();
+
+            if (User == null) {
+                sendToStart();
+            }
+        } catch (Exception e) {
+
+        }
+
+        //  Button addTrip = (Button) findViewById(R.id.btn_add_trip);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -62,12 +76,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         toggle.syncState();
 
 
-
         //-------------View Pager ------
-        mViewPager=findViewById(R.id.main_tab_pager_main);
-        mTablLayout=findViewById(R.id.main_tabs_main);
+        mViewPager = findViewById(R.id.main_tab_pager_main);
+        mTablLayout = findViewById(R.id.main_tabs_main);
 
-        mSectionBageAdapter= new SectionBageadapterMain(getSupportFragmentManager(),getApplicationContext());
+        mSectionBageAdapter = new SectionBageadapterMain(getSupportFragmentManager(), getApplicationContext());
         mViewPager.setAdapter(mSectionBageAdapter);
         mTablLayout.setupWithViewPager(mViewPager);
 
@@ -153,7 +166,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            Intent firstIntent=new Intent(getApplicationContext(),MainMap.class);
+            Intent firstIntent = new Intent(getApplicationContext(), MainMap.class);
             startActivity(firstIntent);
             return true;
         }
@@ -199,15 +212,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         super.onStart();
 
 
-        FirebaseUser User=FirebaseAuth.getInstance().getCurrentUser();
 
-        if(User==null) {
-            sendToStart();
-        }
-        }
+    }
 
     private void sendToStart() {
-        Intent firstIntent=new Intent(getApplicationContext(),First.class);
+        Intent firstIntent = new Intent(getApplicationContext(), First.class);
         startActivity(firstIntent);
         finish();
     }
@@ -219,8 +228,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         String mDriver = "4MuHB3Tim5deVi29ahEceMUXgOw1";
 
 
-        String currentUserRef = "trips/" + mCurrentUserId ;
-        String driverRef = "trips/" + mDriver ;
+        String currentUserRef = "trips/" + mCurrentUserId;
+        String driverRef = "trips/" + mDriver;
         mRootRef = FirebaseDatabase.getInstance().getReference();
         DatabaseReference userTripPush = mRootRef.child("trips").child(mCurrentUserId).child(mDriver).push();
         String push_id = userTripPush.getKey();
@@ -229,17 +238,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         tripsMap.put("from", "الشهداء");
         tripsMap.put("to", "مطار اسكندريه ");
         tripsMap.put("driver", mDriver);
-        tripsMap.put("user",mCurrentUserId);
-        tripsMap.put("day","الخميس");
+        tripsMap.put("user", mCurrentUserId);
+        tripsMap.put("day", "الخميس");
         tripsMap.put("date", "s5/9/2018");
-        tripsMap.put("time"," 5 :00 صباحا ");
+        tripsMap.put("time", " 5 :00 صباحا ");
         tripsMap.put("distance", "250");
         tripsMap.put("price", "3");
         tripsMap.put("waitTime", "2.5");
         tripsMap.put("cost", "750");
         tripsMap.put("kindOFTrip", "ملاكي ");
-        tripsMap.put("kindCar"," لانسر  ");
-
+        tripsMap.put("kindCar", " لانسر  ");
 
 
         Map tripUserMap = new HashMap();
